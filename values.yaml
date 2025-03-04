@@ -60,11 +60,10 @@ guacamole:
 
   persistence:
     plugins:
-      enabled: true
+      enabled: false
       accessMode: ReadWriteOnce
       size: 8Gi
-      #storageClass: nfs-client
-      storageClass: longhorn
+      storageClass: nfs-client
       # existingClaim: existing-pvc
 
   configurationFiles:
@@ -184,7 +183,7 @@ mysql:
 
   ## Persist data to a persistent volume
   persistence:
-    enabled: true
+    enabled: false
     ## database data Persistent Volume Storage Class
     ## If defined, storageClassName: <storageClass>
     ## If set to "-", storageClassName: "", which disables dynamic provisioning
@@ -192,7 +191,7 @@ mysql:
     ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
     ##   GKE, AWS & OpenStack)
     ##
-    storageClass: "longhorn"
+    storageClass: "nfs-client"
     accessMode: ReadWriteOnce
     size: 8Gi
     annotations: {}
