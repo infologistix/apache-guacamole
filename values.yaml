@@ -37,14 +37,14 @@ guacamole:
     #      servicePort: 443
       nginx.ingress.kubernetes.io/proxy-buffering: "off"
     hosts:
-      - host: "wiki.int.platform.ilx"
+      - host: "guacamole.int.platform.ilx"
         paths:
           - path: /
             pathType: ImplementationSpecific
     tls: # []
-      - secretName: wiki-gateway-tls
+      - secretName: guacamole-gateway-tls
         hosts:
-          - "wiki.int.platform.ilx"
+          - "guacamole.int.platform.ilx"
 
   resources: {}
     # We usually recommend not to specify default resources and to leave this as a conscious
@@ -63,7 +63,8 @@ guacamole:
       enabled: true
       accessMode: ReadWriteOnce
       size: 8Gi
-      storageClass: nfs-client
+      #storageClass: nfs-client
+      storageClass: "longhorn"
       # existingClaim: existing-pvc
 
   configurationFiles:
