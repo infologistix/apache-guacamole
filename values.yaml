@@ -22,7 +22,7 @@ guacamole:
     MYSQL_PORT: 3306
 
   ingress:
-    enabled: true
+    enabled: false
     annotations:
       ingress.kubernetes.io/ssl-redirect: "true"
       kubernetes.io/tls-acme: "true"
@@ -41,8 +41,8 @@ guacamole:
     hosts:
       - guacamole.corp.justin-tech.com
     tls:
-    - hosts:
-      - guacamole.corp.justin-tech.com
+      - hosts:
+          - guacamole.corp.justin-tech.com
 
   resources: {}
     # We usually recommend not to specify default resources and to leave this as a conscious
