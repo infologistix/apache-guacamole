@@ -64,7 +64,7 @@ guacamole:
       accessMode: ReadWriteOnce
       size: 8Gi
       #storageClass: nfs-client
-      storageClass: "longhorn"
+      storageClass: longhorn
       # existingClaim: existing-pvc
 
   configurationFiles:
@@ -192,7 +192,7 @@ mysql:
     ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
     ##   GKE, AWS & OpenStack)
     ##
-    storageClass: "nfs-client"
+    storageClass: "longhorn"
     accessMode: ReadWriteOnce
     size: 8Gi
     annotations: {}
