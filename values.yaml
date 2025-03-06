@@ -9,6 +9,9 @@ guacamole:
     ldap-port: 389
     ldap-user-base-dn: "ou=users,dc=example,dc=org"
     ldap-group-base-dn: "ou=groups,dc=example,dc=org"
+    ldap-search-bind-dn: "cn=admin,dc=example,dc=org"  # Admin credentials
+    ldap-search-bind-password: "admin"
+    ldap-username-attribute: "uid" 
     
   replicaCount: 1
 
