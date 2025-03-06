@@ -3,6 +3,13 @@
 # Declare variables to be passed into your templates.
 
 guacamole:
+
+  config:
+    ldap-hostname: ldap.analytical-workbench.svc.cluster.local
+    ldap-port: 389
+    ldap-user-base-dn: "ou=users,dc=example,dc=org"
+    ldap-group-base-dn: "ou=groups,dc=example,dc=org"
+    
   replicaCount: 1
 
   image:
