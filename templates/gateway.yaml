@@ -11,12 +11,12 @@ spec:
       name: http
       number: 80
       protocol: HTTP
-    hosts: {{ .Values.gateway.hosts }}
+    hosts: {{ .Values.guacamole.gateway.hosts }}
   - port:
       name: https
       number: 443
       protocol: HTTPS
-    hosts: {{ .Values.gateway.hosts }}
+    hosts: {{ .Values.guacamole.gateway.hosts }}
     tls:
       mode: SIMPLE
-      credentialName: {{ .Values.gateway.tls.secretName }}
+      credentialName: {{ .Values.guacamole.gateway.tls.secretName }}
