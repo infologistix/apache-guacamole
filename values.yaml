@@ -24,10 +24,10 @@ guacamole:
   
 
   gateway:
-  hosts:
-    - "guacamole.int.platform.ilx"
-  tls:
-    secretName: guacamole-gateway-tls
+    hosts:
+      - "guacamole.int.platform.ilx"
+    tls:
+      secretName: guacamole-gateway-tls
 
 
   ingress:
