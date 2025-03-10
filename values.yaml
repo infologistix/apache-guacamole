@@ -21,6 +21,14 @@ guacamole:
   mysql:
     MYSQL_HOSTNAME: guacamole-mysql
     MYSQL_PORT: 3306
+  
+
+  gateway:
+  hosts:
+    - "guacamole.int.platform.ilx"
+  tls:
+    secretName: guacamole-gateway-tls
+
 
   ingress:
     enabled: false

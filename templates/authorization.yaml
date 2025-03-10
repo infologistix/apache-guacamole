@@ -1,0 +1,13 @@
+apiVersion: security.istio.io/v1
+kind: AuthorizationPolicy
+metadata:
+  name: {{ include "guacamole.fullname" . }}
+  namespace: {{ .Release.Namespace }}
+spec:
+  rules:
+  - from:
+    - source:
+        principals: 
+        - "cluster.local/ns/{{ .Release.Namespace }}/sa/default"
+        - "cluster.local/ns/{{ .Release.Namespace }}/sa/{{ include "guacamole.serviceAccountName" . }}"
+        - "cluster.local/ns/istio-system/sa/istio-ingressgateway-service-account"

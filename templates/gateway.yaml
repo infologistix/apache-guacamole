@@ -1,0 +1,22 @@
+apiVersion: networking.istio.io/v1
+kind: Gateway
+metadata:
+  name: {{ include "guacamole.fullname" . }}-ingress-gateway
+  namespace: istio-system
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+  - port:
+      name: http
+      number: 80
+      protocol: HTTP
+    hosts: {{ .Values.gateway.hosts }}
+  - port:
+      name: https
+      number: 443
+      protocol: HTTPS
+    hosts: {{ .Values.gateway.hosts }}
+    tls:
+      mode: SIMPLE
+      credentialName: {{ .Values.gateway.tls.secretName }}
