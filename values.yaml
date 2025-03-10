@@ -3,16 +3,7 @@
 # Declare variables to be passed into your templates.
 
 guacamole:
-
-  config:
-    ldap-hostname: ldap.analytical-workbench.svc.cluster.local
-    ldap-port: 389
-    ldap-user-base-dn: "ou=users,dc=example,dc=org"
-    ldap-group-base-dn: "ou=groups,dc=example,dc=org"
-    ldap-search-bind-dn: "cn=admin,dc=example,dc=org"  # Admin credentials
-    ldap-search-bind-password: "admin"
-    ldap-username-attribute: "uid" 
-    
+ 
   replicaCount: 1
 
   image:
@@ -84,7 +75,7 @@ guacamole:
       # openid-jwks-endpoint:
       # openid-issuer:
       # openid-client-id: guacamole
-      # openid-redirect-uri:
+      # openid-redirect-uri: 
       # openid-username-claim-type: username
       # openid-scope: openid email profile
       # openid-allowed-clock-skew: 500
