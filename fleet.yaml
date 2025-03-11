@@ -16,7 +16,7 @@ values:
         openid-jwks-endpoint: https://login.microsoftonline.com/d83f4f93-53d7-4894-ad71-c814acd0f3cc/discovery/v2.0/keys
         openid-issuer: https://login.microsoftonline.com/d83f4f93-53d7-4894-ad71-c814acd0f3cc/v2.0
         openid-client-id: 82bdb154-4769-4ba3-a268-bbe530e71213
-        # openid-redirect-uri: 
+        openid-redirect-uri: guacamole.int.platform.ilx
         # openid-username-claim-type: username
         # openid-scope: openid email profile
         # openid-allowed-clock-skew: 500
