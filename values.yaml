@@ -25,7 +25,7 @@ guacamole:
 
   gateway:
     hosts:
-      - "guacamole.int.platform.ilx"
+      - "guacamole.kubespectra.internal"
     tls:
       secretName: guacamole-gateway-tls
 
@@ -46,14 +46,14 @@ guacamole:
     #      servicePort: 443
       nginx.ingress.kubernetes.io/proxy-buffering: "off"
     hosts:
-      - host: "guacamole.int.platform.ilx"
+      - host: "guacamole.kubespectra.internal"
         paths:
           - path: /
             pathType: ImplementationSpecific
     tls: # []
       - secretName: guacamole-gateway-tls
         hosts:
-          - "guacamole.int.platform.ilx"
+          - "guacamole.kubespectra.internal"
 
   resources: {}
     # We usually recommend not to specify default resources and to leave this as a conscious
