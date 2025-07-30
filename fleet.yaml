@@ -1,4 +1,6 @@
 defaultNamespace: guacamole
+dependsOn:
+  - name: istio
 helm:
   repo: https://github.com/kubespectra/apache-guacamole/tree/main
   releaseName: guacamole
