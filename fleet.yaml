@@ -22,3 +22,6 @@ values:
         # openid-username-claim-type: username
         # openid-scope: openid email profile
         # openid-allowed-clock-skew: 500
+
+  kiali:
+    enabled: false
